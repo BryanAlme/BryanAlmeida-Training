@@ -1,1 +1,71 @@
 
+import Foundation
+
+func twoStrings(s1: String, s2: String) -> String {
+    let uniqueCharacters = Set(s2)
+    for char in uniqueCharacters {
+        if s1.contains(char) {
+            return "YES"
+        }
+    }
+    return "NO"
+}
+
+twoStrings(s1: "hello", s2: "world")
+
+twoStrings(s1: "hi", s2: "world")
+
+print(twoStrings(s1: "hello", s2: "world"))
+print(twoStrings(s1: "hi", s2: "world"))
+
+
+
+func Exaample (p1: String , p2: String )-> (String) {
+    let newCaracter = p2
+    for charact in newCaracter{
+        
+        if p1.contains(charact){
+            return "perfect"
+        }
+        
+    }
+     return "BAd"
+    
+}
+
+Exaample(p1: "lasa", p2: "casa")
+
+Exaample(p1: "word", p2: "math")
+
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+
+import Foundation
+        
+func sockMerchant(n: Int, ar: [Int]) -> Int {
+    var doneArr : [Int] = [Int]()
+    var match : Int = 0
+    for i in 0..<n {
+        let currentColor = ar[i]
+        if let index = doneArr.firstIndex(of: currentColor) {
+            
+                match = match + 1
+                doneArr.remove(at: index)
+            
+        }else{
+            doneArr.append(currentColor)
+        }
+    }
+    return match
+}
+
+sockMerchant(n: 9, ar: [10, 20, 20, 10, 10, 30, 50, 10, 20])
+
+print(sockMerchant(n: 9, ar: [10,20,20,10,10,30,50,10,20]))
+
+
+
+
+
+
