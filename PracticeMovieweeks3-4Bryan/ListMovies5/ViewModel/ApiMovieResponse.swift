@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct ApiMovieResponse: Codable {
-    let results: [Movies]
+struct ApiMovieResponses: Codable {
+    let results: [Moviess]
 }
 
-struct Movies: Codable {
+struct Moviess: Codable {
     let id: Int?
     let title: String?
     let posterPath: String?
@@ -27,6 +27,15 @@ struct Movies: Codable {
     
 }
 
+struct MovieItem: Codable {
+    var row: Int
+    var title : String?
+    var overview : String?
+    var imageData : Data?
+    var isFavourite : Bool?
+}
+
+
 struct MovieDetail: Codable {
     let id:Int
     let productionCompanies:[ProductionCompany]
@@ -38,14 +47,6 @@ struct MovieDetail: Codable {
 }
 
 
-
-struct MovieItem: Codable {
-    var row: Int
-    var title : String?
-    var overview : String?
-    var imageData : Data?
-    var isFavourite : Bool?
-}
 
 struct ProductionCompany:Codable{
     let id:Int
